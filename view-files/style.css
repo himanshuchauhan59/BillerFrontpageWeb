@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav {
+    padding: 10px 0px;
+    background-color: rgba(255, 255, 255, 0.295);
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .nav-brand-logo {
+    margin: 0px 10px;
+}
+
+.nav .nav-all-items {
+    position: relative;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav li.nav-items {
+    margin: 10px;
+}
+
+.nav li.nav-items>a {
+    display: block;
+    color: rgba(68, 68, 68, 0.644);
+    text-decoration: none;
+    transition: all 0.50s;
+}
+
+.nav li.nav-items>a:hover {
+    color: black;
+    transform: translateY(-10px);
+}
+
+.btn-toggle {
+    display: none;
+    border: none;
+    transition: 0.50s;
+    background-color: transparent;
+
+}
+
+.toggle-block {
+    position: relative;
+    right: 0px;
+}
+
+.slide-over {   
+    background-color: white;
+    display: none;
+    width: 100%;
+    margin: 50px 0px;
+    position: absolute;
+    z-index: 2;
+    padding: 10px 50px;
+}
+
+.slide-over .nav-all-items {
+    padding: 0px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation-name: shadow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition: 0.50s;
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 10px 3px 17px gray;
+    }
+
+    20% {
+        box-shadow: 10px 8px 17px gray;
+    }
+
+    40% {
+        box-shadow: -10px 8px 17px gray;
+    }
+
+    60% {
+        box-shadow: 0px 8px 17px gray;
+    }
+
+    80% {
+        box-shadow: 5px 8px 17px gray;
+    }
+
+    100% {
+        box-shadow: 10px 3px 17px gray;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.50s;
+}
+
+.slide-over .nav-all-items li,
+.slide-over .nav-all-items li a {
+    display: block;
+    margin: 8px 0px 5px 0px;
+    color: rgba(68, 68, 68, 0.644);
+    text-decoration: none;
+    transition: all 0.50s;
+}
+
+.active {
+    color: black;
+}
+
+.slide-over .nav-all-items li.nav-item>a:hover {
+    color: black;
+    transform: translateY(-10px);
+}
+
+.slider-background-img {
+    width: 100%;
+    position: absolute;        
+}
+
+
+@media screen and (max-width : 650px) {
+    .nav {
+        overflow: hidden;
+        align-items: flex-start;
+    }
+
+    .btn-toggle {
+        display: block;
+        position: relative;
+    }
+
+    .nav .nav-all-items {
+        display: none;
+    }
+}

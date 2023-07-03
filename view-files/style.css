@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --fontSize : 10px;
+}
+
 .nav {
     padding: 10px 0px;
     background-color: rgba(255, 255, 255, 0.295);
@@ -51,7 +55,7 @@
     border: none;
     transition: 0.50s;
     background-color: transparent;
-
+    margin: 0px 10px;
 }
 
 .toggle-block {
@@ -141,6 +145,24 @@
     position: absolute;        
 }
 
+.card {
+    margin: 10px 20px;
+    max-width: 20%;
+    position: relative;
+}
+
+.card  .btn-slide-card {
+    width: auto;
+    border: none;
+    background: transparent;
+    margin: 5px;
+    font-size: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px; 
+    right: 0px; 
+}
+
 
 @media screen and (max-width : 650px) {
     .nav {
@@ -155,5 +177,19 @@
 
     .nav .nav-all-items {
         display: none;
+    }
+
+    .card {
+        max-width: 30%;
+    }
+
+    .card .card-body {
+        font-size: var(--fontSize);
+    }
+}
+
+@media screen and (max-width : 400px) { 
+    .card {
+        max-width: 35%;
     }
 }

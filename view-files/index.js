@@ -32,3 +32,4 @@ close_btn.addEventListener("click" , () => {
         close_btn.style.transform = "scaleX(1)";
     }
 })
+

@@ -62,16 +62,17 @@
 }
 
 .slide-over {
-    background-color: white;
+    background-color: transparent;
     display: none;
     width: 100%;
-    margin: 50px 0px;
+    margin: 50% 0px;
     position: absolute;
     z-index: 2;
     padding: 10px 50px;
 }
 
 .slide-over .nav-all-items {
+    background-color: rgb(255, 255, 255);
     padding: 0px;
     position: relative;
     border-radius: 10px;
@@ -200,18 +201,48 @@
     background-color: rgb(98, 0, 255);
 }
 
-.bookmarks , .bookmarks h3{
-    width: fit-content;
-    position: sticky;
-    z-index: 3;
-    top: 0px;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1em;
+.bookmarks{
+    margin: 5px;
+    font-size: 1.5rem;
     cursor: pointer;
-    text-decoration: none;
     color: black;
-    background-color: rgba(240, 255, 255, 0.651);
+}
+
+.about-section {
+    padding: 20px 0px;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-section img {
+    width: 50%;
+}
+
+.about-section .about-content {
+    width: 50%;
+}
+
+.about-section .about-content ul {
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.footer-section {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.footer-section .box {
+    padding: 10px;
 }
 
 @media screen and (max-width : 650px) {
@@ -244,6 +275,13 @@
     .redirect-component {
         font-size: 10px;
         width: 60%;
+    }
+    .about-section img {
+        width: 100%;
+    }
+    .about-section .about-content {
+        padding: 10px;
+        width: 100%;
     }
 }
 

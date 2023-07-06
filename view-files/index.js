@@ -20,6 +20,7 @@ card.forEach((ele) => {
 
 nav_item.forEach((ele) => {
     ele.addEventListener("click" , () => {
+        console.log("clicked");
         $(".slide-over").slideToggle();
         open_toggle.style.transform = "rotate(0deg)";
         toggleBol = !toggleBol
